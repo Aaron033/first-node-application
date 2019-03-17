@@ -1,3 +1,9 @@
 const fs = require('fs'); 
 
-fs.writeFileSync('notes.txt', 'This file was created by Node.js !')
+//fs.writeFileSync('notes.txt', 'This file was created by Node.js !')
+
+try {
+    fs.appendFileSync('notes.txt',' and this file was created by Aaron Botello using append '); 
+} catch (err){
+    console.log("There was an error");
+}
