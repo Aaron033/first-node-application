@@ -1,7 +1,10 @@
 const fs = require('fs'); 
 
 //fs.writeFileSync('notes.txt', 'This file was created by Node.js !')
-document.getElementById("first").addEventListener('input',);
+document.getElementById("first").addEventListener('input',function(e){
+    let a = e.target.value; 
+    console(a);
+});
 try {
     fs.appendFileSync('notes.txt',' and this file was created by Aaron Botello using append '); 
 } catch (err){
