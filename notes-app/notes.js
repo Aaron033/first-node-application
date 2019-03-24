@@ -1,6 +1,5 @@
-const multy = function(a, b){
-    return a * b; 
+const getNotes = function(){
+    return "your notes..."
+};
 
-}
-
-module.exports = multy; 
+module.exports = getNotes;

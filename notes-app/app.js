@@ -1,10 +1,14 @@
 const add = require('./utils.js');
 const rest = require('./utils.js');
-const multy = require('./notes.js');
+const getNotes = require('./notes.js')
+// const multy = require('./notes.js');
 
 
-const multyplication = multy(3, 4); 
-console.log(multyplication, " This is multy");
+const mynotes = getNotes();
+console.log(mynotes);
+
+// const multyplication = multy(3, 4); 
+// console.log(multyplication, " This is multy");
 
 const sum = add(34, 39)
 // const  name = "Aaron"; 
