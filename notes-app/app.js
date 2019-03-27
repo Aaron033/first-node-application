@@ -7,4 +7,5 @@ console.log(msg);
 console.log(validator.isEmail('aaron.botello.h@gmail.com'))
 // const multy = require('./notes.js');
 
+console.log(validator.isURL('http://www.google.com'));
 
