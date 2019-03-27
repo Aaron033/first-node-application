@@ -10,4 +10,4 @@ const msg = getNotes();
 // console.log(validator.isURL('http://www.google.com'));
 
 console.log(chalk.green('Success'));
-
+console.log(chalk.red("error"));
