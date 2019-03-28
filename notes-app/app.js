@@ -11,3 +11,4 @@ const msg = getNotes();
 
 console.log(chalk.green('Success'));
 console.log(chalk.red("error"));
+console.log(chalk.bold("Not a necessary code"));
