@@ -15,3 +15,11 @@ console.log(greenmsg);
 
 //The information that we pass after we type node app.js Aaron can be access by process.argv
 console.log(process.argv[2]);
+
+const command = process.argv[2]; 
+
+if (command === 'add'){
+    console.log('Adding a note!')
+}else if(command === 'remove'){
+    console.log("Removing note");
+}
