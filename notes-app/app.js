@@ -12,3 +12,6 @@ const msg = getNotes();
 console.log(chalk.green('Success'));
 const greenmsg = chalk.green.inverse.bold('Success')
 console.log(greenmsg); 
+
+//The information that we pass after we type node app.js Aaron can be access by process.argv
+console.log(process.argv);
