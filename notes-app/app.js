@@ -15,7 +15,9 @@ console.log(greenmsg);
 
 //The information that we pass after we type node app.js Aaron can be access by process.argv
 console.log(process.argv[2]);
-
+//process.argv gives everything that you type after:  node app.js *someting 
+//The first 0 and 1 lines are the location of the file and 
+//The third one is whatever you inputted
 const command = process.argv[2]; 
 
 if (command === 'add'){
