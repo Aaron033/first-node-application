@@ -17,3 +17,16 @@ yargs.command({
     }
 
 })
+//1 console.log(yargs.argv); it will show in the input commands: app.js add Add a new note 
+//Because we added a new command whenever you do (1)
+
+//Create remove command 
+yargs.command({
+    command: 'remove', 
+    describe: "removing a note", 
+    handler: function(){
+        console.log('Removing a note')
+    }
+})
+console.log(yargs.argv);
+
