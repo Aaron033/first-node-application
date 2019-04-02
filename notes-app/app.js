@@ -12,6 +12,11 @@ yargs.version('1.1.0') // This is how you change the version
 yargs.command({
     command: 'add', 
     describe: 'Add a new note', 
+    builder: {
+        title:{
+            describe: 'Note title'
+        }
+    },
     handler: function(){
         console.log('Adding a new note!')
     }
@@ -32,7 +37,7 @@ yargs.command({
     command: 'list', 
     describe: "listing all the notes ", 
     handler: function(){
-        console.log('This is the list of all notes')
+        console.log('Listing out notes')
     }
 })
 yargs.command({
