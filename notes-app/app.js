@@ -51,3 +51,10 @@ yargs.command({
 })
 console.log(yargs.argv);
 
+yargs.command({
+    command: 'read', 
+    describe: "reading a note ", 
+    handler: function(){
+        console.log('now we are reading a note')
+    }
+})
