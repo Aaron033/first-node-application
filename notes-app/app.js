@@ -17,6 +17,12 @@ yargs.command({
             describe: 'Note title', 
             demandOption: true, 
             type: 'string'
+        }, 
+        body:{
+            describe: "important addition", 
+            demandOption: true, 
+            type: 'string'
+
         }
     },
     handler: function(argv){
