@@ -20,7 +20,7 @@ yargs.command({
         }
     },
     handler: function(argv){
-        console.log('Adding a new note!', argv)
+        console.log('Title', argv.title)
     }
 
 })
@@ -49,12 +49,6 @@ yargs.command({
         console.log('now we are reading a note')
     }
 })
-console.log(yargs.argv);
+console.log(yargs.argv.title);
 
-yargs.command({
-    command: 'read', 
-    describe: "reading a note ", 
-    handler: function(){
-        console.log('now we are reading a note')
-    }
-})
+
