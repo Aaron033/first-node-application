@@ -20,7 +20,7 @@ yargs.command({
         }
     },
     handler: function(argv){
-        console.log('Title', argv.title)
+        console.log('Title: '+  argv.title)
     }
 
 })
@@ -49,6 +49,6 @@ yargs.command({
         console.log('now we are reading a note')
     }
 })
-console.log(yargs.argv.title);
+yargs.parse()
 
 
