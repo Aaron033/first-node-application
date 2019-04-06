@@ -6,5 +6,5 @@ const book = {
 }
 
 const bookJSON = JSON.stringify(book)
-fs.writeFileSync('1-json.json', )
+fs.writeFileSync('1-json.json', bookJSON)
 
