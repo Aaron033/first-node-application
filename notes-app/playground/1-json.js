@@ -1,10 +1,4 @@
 const fs = require('fs')
 
-const book = {
- title: 'Ego is the Enemy', 
- author: 'Aaron Botello'
-}
-
-const bookJSON = JSON.stringify(book)
-fs.writeFileSync('1-json.json', bookJSON)
-
+const dataBuffer = fs.readFileSync('1-json.json') // What comes back from the file is not a string it is a buffer 
+//that is how node.js represents binary data 
