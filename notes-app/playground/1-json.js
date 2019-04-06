@@ -9,4 +9,7 @@ const car ={
     model: "cc"
 }
 const bookJSON = JSON.stringify(book)
-console.log(bookJSON)
+console.log(bookJSON) // this converts the objet to a string 
+
+const parseData = JSON.parse(bookJSON)
+console.log(parseData.author);
