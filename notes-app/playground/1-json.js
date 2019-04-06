@@ -4,5 +4,9 @@ const book = {
 
 }
 
+const car ={
+    make: "volkswagen", 
+    model: "cc"
+}
 const bookJSON = JSON.stringify(book)
 console.log(bookJSON)
