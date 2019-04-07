@@ -25,9 +25,12 @@ if(duplicateNotes.length === 0 ) {
     title: title,  // The second value comes from the title comes from the addNote argument  
     body: body 
     })
+    saveNotes(notes)
+    console.log('New note added!')
+}else {
+    console.log('This note already exists')
 }
-saveNotes(notes)
-console.log('New note added!')
+
 }
 
  
