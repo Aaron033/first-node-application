@@ -12,20 +12,22 @@ const notes = loadNotes()//We sotrage the info into notes
 // We are going to push a note as object 
 
 //here we are to save all duplicate notes that we find 
+//*This code only check if there is a duplicate 
 const duplicateNotes = notes.filter( function(note){
     return note.title === title  //it's going to check if the note.title is the same with the passed title 
     
 })
 
-if() { 
-    
+if(duplicateNotes.length === 0 ) { 
+ // If the length is 0 it means that we did not find any existing note 
+ // Now we can safety add a new note 
+ notes.push({
+    title: title,  // The second value comes from the title comes from the addNote argument  
+    body: body 
+    })
 }
-notes.push({
-title: title,  // The second value comes from the title comes from the addNote argument  
-body: body 
-})
-
 saveNotes(notes)
+console.log('New note added!')
 }
 
  
