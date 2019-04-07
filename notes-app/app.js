@@ -22,13 +22,11 @@ yargs.command({
             describe: "important addition", 
             demandOption: true, 
             type: 'string'
-
         }
     },
     handler: function(argv){
      notes.addNote(argv.title, argv.body) // notes comes from the file notes.js 
      //argv can be any variable and we can access title and body accordinly 
-
     }
 
 })
@@ -42,7 +40,12 @@ yargs.command({
     handler: function(){
         console.log('Removing a note')
     }
+    
 })
+
+
+
+
 yargs.command({
     command: 'list', 
     describe: "listing all the notes ", 

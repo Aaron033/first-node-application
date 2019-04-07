@@ -30,10 +30,8 @@ if(duplicateNotes.length === 0 ) {
 }else {
     console.log('This note already exists')
 }
-
 }
 
- 
 
 //This is the code to save notes 
 const saveNotes = function(notes){ // its going to take an array 
@@ -41,7 +39,6 @@ const saveNotes = function(notes){ // its going to take an array
     fs.writeFileSync('notes.json', dataJSON)// We are creating the notes.json file and passing the dataJSON data as a string 
     //--> because json files only accepts strings 
 }
-
 const loadNotes = function (){
     try{
         const dataBuffer = fs.readFileSync('notes.json')// We read the file and we storage the file in the databuffer variable
@@ -51,9 +48,12 @@ const loadNotes = function (){
     } catch(e){
        return []
     }
+}
+//This code is to remove a note 
+const removeNote = function(title){
+    const notes = loadNotes() 
 
 }
-
 // The code below is how you export more than one function 
 module.exports = {
     getNotes: getNotes, 
