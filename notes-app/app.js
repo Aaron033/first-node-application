@@ -26,7 +26,8 @@ yargs.command({
         }
     },
     handler: function(argv){
-     notes.addNote(argv.title, argv.body)
+     notes.addNote(argv.title, argv.body) // notes comes from the file notes.js 
+     //argv can be any variable and we can access title and body accordinly 
 
     }
 
