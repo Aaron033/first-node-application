@@ -24,3 +24,18 @@ const dataJSON = dataBuffer.toString()
 const data = JSON.parse(dataJSON)
 
 console.log(data.title)
+
+
+
+/* my code  */
+const myInfo = {
+    name: 'Aaron',
+    planet: 'Mars', 
+    age: 25
+   }
+   
+   const swapinfo = JSON.stringify(myInfo)
+   fs.writeFileSync('1-json.json', swapinfo)
+   
+   console.log(swapinfo);
+   /* end of my code  */

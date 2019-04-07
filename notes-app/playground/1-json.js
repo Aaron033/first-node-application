@@ -7,13 +7,10 @@ const dataJSON = dataBuffer.toString()//This is required
 // * They are required because we loaded the file into visual studio code 
 
 
-const myInfo = {
- name: 'Aaron',
- planet: 'Mars', 
- age: 25
-}
+/* This is another way  1.1 */
+user.name = 'Pelos'
+user.age = 21 
 
-const swapinfo = JSON.stringify(myInfo)
-fs.writeFileSync('1-json.json', swapinfo)
-
-console.log(swapinfo);
+const myinfo = JSON.stringify(user)
+fs.writeFileSync('1-json.json', myInfo)
+/* This is another way  1.1 */
