@@ -10,6 +10,16 @@ const getNotes = function(){
 const addNote = function(title, body ){
 const notes = loadNotes()//We sotrage the info into notes 
 // We are going to push a note as object 
+
+//here we are to save all duplicate notes that we find 
+const duplicateNotes = notes.filter( function(note){
+    return note.title === title  //it's going to check if the note.title is the same with the passed title 
+    
+})
+
+if() { 
+    
+}
 notes.push({
 title: title,  // The second value comes from the title comes from the addNote argument  
 body: body 
