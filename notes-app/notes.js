@@ -9,9 +9,19 @@ const getNotes = function(){
 
 const addNote = function(title, body ){
 const notes = loadNotes()
+// We are going to push a note as object 
+notes.push({
+title: title,  // The second value comes from the title comes from the addNote argument  
+body: body 
+})
 console.log(notes)
 }
 
+
+//This is the code to save notes 
+const saveNotes = function(notes){
+
+}
 
 const loadNotes = function (){
     try{
