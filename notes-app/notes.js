@@ -11,10 +11,10 @@ const addNote = function(title, body ){
 const notes = loadNotes()//We sotrage the info into notes 
 // We are going to push a note as object 
 
-//here we are to save all duplicate notes that we find 
+//Here, we are to save all duplicate notes that we find 
 //*This code only check if there is a duplicate 
 const duplicateNotes = notes.filter( function(note){
-    return note.title === title  //it's going to check if the note.title is the same with the passed title 
+    return note.title === title  //it's going to check if the note.title is the same with the typed title 
     
 })
 
@@ -53,9 +53,12 @@ const loadNotes = function (){
 const removeNote = function(title){
     const notes = loadNotes() 
 
+    console.log(notes)
+
 }
 // The code below is how you export more than one function 
 module.exports = {
     getNotes: getNotes, 
-    addNote: addNote
+    addNote: addNote,
+    removeNote: removeNote
 }
