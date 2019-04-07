@@ -9,10 +9,19 @@ const getNotes = function(){
 
 const addNote = function(title, body ){
 const notes = loadNotes()
+console.log(notes)
 }
 
 
 const loadNotes = function (){
+    try{
+        const dataBuffer = fs.readFileSync('notes.json')// We read the file and we storage the file in the databuffer variable
+        const dataJSON = dataBuffer.toString() // The file comes as number, so we must converted into string  
+        return JSON.parse(dataJSON)// Now that the information is converted to string we must comverted to an object 
+
+    } catch(e){
+       return []
+    }
 
 }
 
