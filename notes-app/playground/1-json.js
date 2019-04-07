@@ -5,7 +5,14 @@ const dataBuffer = fs.readFileSync('1-json.json')
 const dataJSON = dataBuffer.toString()
 const data = JSON.parse(dataJSON)
 
-// const data = JSON.parse(dataBuffer)
-var myName = data.author 
-console.log(myName)
-console.log(data)
+
+const myInfo = {
+ name: 'Aaron',
+ planet: 'Mars', 
+ age: 25
+}
+
+const swapinfo = JSON.stringify(myInfo)
+fs.writeFileSync('1-json.json', )
+
+console.log(data.name)

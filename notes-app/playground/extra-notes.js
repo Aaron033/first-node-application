@@ -2,7 +2,7 @@ const car ={
     make: "volkswagen", 
     model: "cc"
 }
-const bookJSON = JSON.stringify(book)// this converts the objet to a string 
+const bookJSON = JSON.stringify(book)// This converts the objet into a  string 
 console.log(bookJSON) 
 const book = {
      title: 'Ego is the Enemy', 
@@ -10,7 +10,7 @@ const book = {
     }
     
     const bookJSON = JSON.stringify(book)
-    fs.writeFileSync('1-json.json', bookJSON)
+    fs.writeFileSync('1-json.json', bookJSON) // Second argument it'is what I am write 
     
     const dataBuffer = fs.readFileSync('1-json.json') // What comes back from the file is not a string it is a buffer 
     //that is how node.js represents binary data  meaning : 45 74 62 44 
