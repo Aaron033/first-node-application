@@ -52,12 +52,22 @@ const loadNotes = function (){
 //This code is to remove a note 
 const removeNote = function(title){
     const notes = loadNotes() 
+ console.log(title)
+    // const noteToRemove = notes.filter(function(){
+    // return note.title === title 
+    // })
+    // if(title === notes.title){
+    //     console.log('Equal title')
+    // }else{
+    //     console.log('Different title')
+    // }
 
-    console.log(notes)
+    // console.log(notes)
 
 }
 // The code below is how you export more than one function 
 module.exports = {
+    //This is how you export all the function out of the file 
     getNotes: getNotes, 
     addNote: addNote,
     removeNote: removeNote
