@@ -2,8 +2,12 @@ const getNotes = function(){
     return "your notes..."
 };
 
-const sum  = function(n, m){
-    return n + m
+const addNote = function(title, body ){
 
 }
-module.exports = getNotes;
+
+// The code below is how you export more than one function 
+module.exports = {
+    getNotes: getNotes, 
+    addNote: addNote
+}
