@@ -8,19 +8,23 @@ const getNotes = function(){
 };
 
 const addNote = function(title, body ){
-const notes = loadNotes()
+const notes = loadNotes()//We sotrage the info into notes 
 // We are going to push a note as object 
 notes.push({
 title: title,  // The second value comes from the title comes from the addNote argument  
 body: body 
 })
-console.log(notes)
+
+saveNotes(notes)
 }
 
+ 
 
 //This is the code to save notes 
-const saveNotes = function(notes){
-
+const saveNotes = function(notes){ // its going to take an array 
+    const dataJSON = JSON.stringify(notes)// We convert the notes object into a string
+    fs.writeFileSync('notes.json', dataJSON)// We are creating the notes.json file and passing the dataJSON data as a string 
+    //--> because json files only accepts strings 
 }
 
 const loadNotes = function (){
