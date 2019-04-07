@@ -10,7 +10,7 @@ const book = {
     }
     
     const bookJSON = JSON.stringify(book)
-    fs.writeFileSync('1-json.json', bookJSON) // Second argument it'is what I am write 
+    fs.writeFileSync('1-json.json', bookJSON) // Second argument it is what I am going to write 
     
     const dataBuffer = fs.readFileSync('1-json.json') // What comes back from the file is not a string it is a buffer 
     //that is how node.js represents binary data  meaning : 45 74 62 44 

@@ -13,6 +13,6 @@ const myInfo = {
 }
 
 const swapinfo = JSON.stringify(myInfo)
-fs.writeFileSync('1-json.json', )
+fs.writeFileSync('1-json.json', swapinfo)
 
-console.log(data.name)
+console.log(swapinfo);
