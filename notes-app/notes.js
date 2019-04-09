@@ -53,11 +53,11 @@ const loadNotes = function (){
 const removeNote = function(title){
     const notes = loadNotes() 
     const notesToKeep = notes.filter(function(note){
-        return note.title !== title 
+        return note.title !== title // This code is going to return if the tile does not match 
     })
 
 
-
+saveNotes(notesToKeep)
 }
 // The code below is how you export more than one function 
 module.exports = {
