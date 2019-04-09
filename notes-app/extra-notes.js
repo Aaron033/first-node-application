@@ -26,3 +26,22 @@ if (command === 'add'){
 }else if(command === 'remove'){
     console.log("Removing note");
 }
+
+
+if(notes.title === title){
+    console.log('Same')
+}else{
+    console.log('not Same ')
+}
+    // console.log(title)
+    // console.log(notes)
+    // const noteToRemove = notes.filter(function(){
+    // return note.title === title 
+    // })
+    // if(title === notes.title){
+    //     console.log('Equal title')
+    // }else{
+    //     console.log('Different title')
+    // }
+
+    // console.log(notes)
