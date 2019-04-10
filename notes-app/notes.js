@@ -53,13 +53,14 @@ const loadNotes = function (){
 const removeNote = function(title){
     const notes = loadNotes() 
     const notesToKeep = notes.filter(function(note){
-        // return note.title !== title // This code is going to return if the tile does not match 
-        if(note.title !== title){
-            return note.title !== title 
-        }else{
-            return "No note found!"
-        }
+       return note.title !== title // This code is going to return if the tile does not match 
+        
     })
+    if(notes.length === notesToKeep){
+        console.log("No notes removed")
+    }else{
+        console.log("note removed")
+    }
 
 
 saveNotes(notesToKeep)
