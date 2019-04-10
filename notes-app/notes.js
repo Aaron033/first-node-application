@@ -58,9 +58,9 @@ const removeNote = function(title){
         
     })
     if(notes.length === notesToKeep.length){
-        console.log("No notes removed")
+        console.log(chalk.bgGreen("No notes removed"))
     }else{
-        console.log("note removed")
+        console.log(chalk.bgRed("note removed"))
     }
 
 
