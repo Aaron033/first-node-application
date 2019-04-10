@@ -1,5 +1,6 @@
 const fs = require('fs') // If you want to load or read a file from 
 // the system you must use fs
+const chalk = require('chalk')
 
 
 
@@ -56,7 +57,7 @@ const removeNote = function(title){
        return note.title !== title // This code is going to return if the tile does not match 
         
     })
-    if(notes.length === notesToKeep){
+    if(notes.length === notesToKeep.length){
         console.log("No notes removed")
     }else{
         console.log("note removed")
