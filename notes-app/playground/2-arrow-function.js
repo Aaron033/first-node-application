@@ -20,3 +20,6 @@ const event = {
      // properties of objects
  }
 }
+//Arrow function are not suited for method properties function 
+//This is how you access the event object properties 
+event.printGuestList()
