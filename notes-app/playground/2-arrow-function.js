@@ -14,5 +14,9 @@
 
 //Obejct 
 const event = {
-
+ name: 'Birthday Party', 
+ printGuestList: function(){
+     console.log('Guest list for ' + this.name) // this. has the ability to acces 
+     // properties of objects
+ }
 }
