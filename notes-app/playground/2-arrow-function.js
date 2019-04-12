@@ -3,8 +3,16 @@
 // }
 
 //Same functionality 
-const square = (x) => {
-    return x * x 
-}
+// const square = (x) => {
+//     return x * x 
+// }
 
-console.log(square(3))
+//3er version 
+// const square = (x) => x * x
+
+// console.log(square(3))
+
+//Obejct 
+const event = {
+
+}
