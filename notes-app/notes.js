@@ -27,9 +27,9 @@ if(duplicateNotes.length === 0 ) {
     body: body 
     })
     saveNotes(notes)
-    console.log('New note added!')
+    console.log(chalk.green.inverse('New note added!'))
 }else {
-    console.log('This note already exists')
+    console.log(chalk.red.inverse('This note already exists'))
 }
 }
 
