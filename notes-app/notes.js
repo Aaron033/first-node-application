@@ -4,7 +4,7 @@ const chalk = require('chalk')
 
 
 
-const getNotes = function(){
+const getNotes=()=>{
     return "your notes..."
 };
 
@@ -14,10 +14,9 @@ const notes = loadNotes()//We sotrage the info into notes
 
 //Here, we are to save all duplicate notes that we find 
 //*This code only check if there is a duplicate 
-const duplicateNotes = notes.filter((note)=>{
-    return note.title === title  //it's going to check if the note.title is the same with the typed title 
+const duplicateNotes = notes.filter((note) => note.title === title  //it's going to check if the note.title is the same with the typed title 
     
-})
+)
 
 if(duplicateNotes.length === 0 ) { 
  // If the length is 0 it means that we did not find any existing note 
@@ -40,7 +39,7 @@ const saveNotes = (notes)=> { // its going to take an array
     fs.writeFileSync('notes.json', dataJSON)// We are creating the notes.json file and passing the dataJSON data as a string 
     //--> because json files only accepts strings 
 }
-const loadNotes = function (){
+const loadNotes =()=>{
     try{
         const dataBuffer = fs.readFileSync('notes.json')// We read the file and we storage the file in the databuffer variable
         const dataJSON = dataBuffer.toString() // The file comes as number, so we must converted into string  
@@ -53,10 +52,9 @@ const loadNotes = function (){
 //This code is to remove a note 
 const removeNote = (title) => {
     const notes = loadNotes() 
-    const notesToKeep = notes.filter((note)=>{
-       return note.title !== title // This code is going to return if the tile does not match 
+    const notesToKeep = notes.filter((note)=> note.title !== title // This code is going to return if the tile does not match 
         
-    })
+    )
     if(notes.length === notesToKeep.length){
         console.log(chalk.bgGreen("No notes removed"))
     }else{
