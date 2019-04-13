@@ -24,7 +24,7 @@ yargs.command({
             type: 'string'
         }
     },
-    handler: function(argv){
+    handler(argv){
      notes.addNote(argv.title, argv.body) // notes comes from the file notes.js 
      //argv can be any variable and we can access title and body accordinly 
     }
@@ -44,7 +44,7 @@ yargs.command({
     type: 'string'
         }
     },
-    handler: function(argv){ // argv this how we access all our arguments in the handler 
+    handler(argv){ // argv this how we access all our arguments in the handler 
 notes.removeNote(argv.title)
 
        
@@ -55,14 +55,18 @@ notes.removeNote(argv.title)
 yargs.command({
     command: 'list', 
     describe: "listing all the notes ", 
-    handler: function(){
-        console.log('Listing out notes')
+    handler(argv){
+        notes.listNotes(argv.title)
     }
+
+
 })
+
+
 yargs.command({
     command: 'read', 
     describe: "reading a note ", 
-    handler: function(){
+    handler(){ //handler: function(){}
         console.log('now we are reading a note')
     }
 })

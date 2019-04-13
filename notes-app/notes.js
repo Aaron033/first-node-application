@@ -2,8 +2,6 @@ const fs = require('fs') // If you want to load or read a file from
 // the system you must use fs
 const chalk = require('chalk')
 
-
-
 const getNotes=()=>{
     return "your notes..."
 };
@@ -64,9 +62,15 @@ const removeNote = (title) => {
 
 saveNotes(notesToKeep)
 }
+
+const listNotes =() =>{
+    const list = notes.filter((note) => note.title) //note.title is returnig individual notes 
+
+}
 // The code below is how you export more than one function 
 module.exports = {
     //This is how you export all the function out of the file 
+    listNotes:  listNotes,
     getNotes: getNotes, 
     addNote: addNote,
     removeNote: removeNote
