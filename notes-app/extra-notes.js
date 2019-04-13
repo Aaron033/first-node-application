@@ -45,3 +45,22 @@ if(notes.title === title){
     // }
 
     // console.log(notes)
+
+
+
+    //3-arrow-challenge 
+
+    getTasksToDo: function() {
+       
+        const tasksToDo = this.tasks.filter((task)=>{
+            return task.completed === false
+        }) 
+        return tasksToDo
+                // if(finish.completed === false ){
+                //     console.log(finish.text, "its incompleted")
+                // }else {
+                //     return "completed"
+                // }
+        }
+        
+        }
