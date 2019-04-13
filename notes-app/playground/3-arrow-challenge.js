@@ -17,18 +17,19 @@ const tasks = {
         text: 'Film course',
         completed: false
     }], 
-getTasksToDo: function(){
-
-    this.tasks.forEach((finish) => {
-        
-       console.log("The task " +  + " is incompleted ")
+getTasksToDo: function() {
+       
+const tasksToDo = this.tasks.filter((task)=>{
+    return task.completed === false
+}) 
+return tasksToDo
         // if(finish.completed === false ){
         //     console.log(finish.text, "its incompleted")
         // }else {
         //     return "completed"
         // }
 
-    })
+
 
 }
 
