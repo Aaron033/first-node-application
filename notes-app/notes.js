@@ -64,7 +64,8 @@ saveNotes(notesToKeep)
 }
 
 const listNotes =() =>{
-    const list = notes.filter((note) => note.title) //note.title is returnig individual notes 
+    const notes = loadNotes() 
+    const list = notes.filter((note) => console.log(note.title)) //note.title is returnig individual notes 
 
 }
 // The code below is how you export more than one function 
