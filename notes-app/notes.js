@@ -8,13 +8,13 @@ const getNotes = function(){
     return "your notes..."
 };
 
-const addNote = function(title, body ){
+const addNote = (title, body)=>{
 const notes = loadNotes()//We sotrage the info into notes 
 // We are going to push a note as object 
 
 //Here, we are to save all duplicate notes that we find 
 //*This code only check if there is a duplicate 
-const duplicateNotes = notes.filter( function(note){
+const duplicateNotes = notes.filter((note)=>{
     return note.title === title  //it's going to check if the note.title is the same with the typed title 
     
 })
@@ -35,7 +35,7 @@ if(duplicateNotes.length === 0 ) {
 
 
 //This is the code to save notes 
-const saveNotes = function(notes){ // its going to take an array 
+const saveNotes = (notes)=> { // its going to take an array 
     const dataJSON = JSON.stringify(notes)// We convert the notes object into a string
     fs.writeFileSync('notes.json', dataJSON)// We are creating the notes.json file and passing the dataJSON data as a string 
     //--> because json files only accepts strings 
@@ -53,7 +53,7 @@ const loadNotes = function (){
 //This code is to remove a note 
 const removeNote = (title) => {
     const notes = loadNotes() 
-    const notesToKeep = notes.filter(function(note){
+    const notesToKeep = notes.filter((note)=>{
        return note.title !== title // This code is going to return if the tile does not match 
         
     })
