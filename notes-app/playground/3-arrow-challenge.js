@@ -21,7 +21,9 @@ getTasksToDo: function(){
 
     this.tasks.forEach((finish) => {
         if(finish.completed === false ){
-            console.log(finish.text)
+            console.log(finish.text, "its incompleted")
+        }else {
+            return "completed"
         }
     })
 
