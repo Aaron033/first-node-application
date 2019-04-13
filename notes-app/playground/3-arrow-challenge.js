@@ -20,11 +20,14 @@ const tasks = {
 getTasksToDo: function(){
 
     this.tasks.forEach((finish) => {
-        if(finish.completed === false ){
-            console.log(finish.text, "its incompleted")
-        }else {
-            return "completed"
-        }
+        
+       console.log("The task " +  + " is incompleted ")
+        // if(finish.completed === false ){
+        //     console.log(finish.text, "its incompleted")
+        // }else {
+        //     return "completed"
+        // }
+
     })
 
 }
