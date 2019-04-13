@@ -51,7 +51,7 @@ const loadNotes = function (){
     }
 }
 //This code is to remove a note 
-const removeNote = function(title){
+const removeNote = (title) => {
     const notes = loadNotes() 
     const notesToKeep = notes.filter(function(note){
        return note.title !== title // This code is going to return if the tile does not match 
