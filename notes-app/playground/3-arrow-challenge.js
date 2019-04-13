@@ -16,7 +16,17 @@ const tasks = {
     }, {
         text: 'Film course',
         completed: false
-    }]
+    }], 
+getTasksToDo: function(){
+
+    this.tasks.forEach((finish) => {
+        if(finish.completed === false ){
+            console.log(finish.text)
+        }
+    })
+
+}
+
 }
 
 console.log(tasks.getTasksToDo())
