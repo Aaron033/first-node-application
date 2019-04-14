@@ -2,10 +2,6 @@ const fs = require('fs') // If you want to load or read a file from
 // the system you must use fs
 const chalk = require('chalk')
 
-const getNotes=()=>{
-    return "your notes..."
-};
-
 const addNote = (title, body)=>{
 const notes = loadNotes()//We sotrage the info into notes 
 // We are going to push a note as object 
@@ -92,7 +88,7 @@ module.exports = {
     //This is how you export all the function out of the file 
     readNote: readNote,
     listNotes:  listNotes,
-    getNotes: getNotes, 
+    // getNotes: getNotes, 
     addNote: addNote,
     removeNote: removeNote
 }
