@@ -12,11 +12,15 @@ const notes = loadNotes()//We sotrage the info into notes
 
 //Here, we are to save all duplicate notes that we find 
 //*This code only check if there is a duplicate 
-const duplicateNotes = notes.filter((note) => note.title === title  //it's going to check if the note.title is the same with the typed title 
-    
-)
+//const duplicateNotes = notes.filter((note) => note.title === title  //it's going to check if the note.title is the same with the typed title    
+//)
+//The code above is going to check every note even if it finds it
+// The take away concept is that it won't be a  second duplicate once it find one 
+// So for the logic of it  we need to use find() function 
 
-if(duplicateNotes.length === 0 ) { 
+const duplicateNote = notes.find((note) => note.title === title)
+
+if(!duplicateNote) {  
  // If the length is 0 it means that we did not find any existing note 
  // Now we can safety add a new note 
  notes.push({
@@ -65,7 +69,8 @@ saveNotes(notesToKeep)
 
 const listNotes =() =>{
     const notes = loadNotes() 
-    const list = notes.filter((note) => console.log(note.title)) //note.title is returnig individual notes 
+console.log(chalk.bgGreen("Your Notes"))
+    const list = notes.filter((note) => console.log( note.title)) //note.title is returnig individual notes 
 
 }
 // The code below is how you export more than one function 
