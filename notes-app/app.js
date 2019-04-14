@@ -66,8 +66,8 @@ yargs.command({
 yargs.command({
     command: 'read', 
     describe: "reading a note ", 
-    handler(){ //handler: function(){}
-        console.log('now we are reading a note')
+    handler(argv){ //handler: function(){}
+        notes.readNote(argv.title)
     }
 })
 yargs.parse()

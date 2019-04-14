@@ -73,9 +73,24 @@ console.log(chalk.bgGreen("Your Notes"))
     const list = notes.filter((note) => console.log( note.title)) //note.title is returnig individual notes 
 
 }
+
+const readNote = (title) =>{
+    const notes = loadNotes()
+    const findNote = notes.find((note) => note.title === title)
+
+    if(findNote){
+        console.log(chalk.bgGreen("Note found"))
+        console.log(chalk.yellow(findNote.title + "\n") + findNote.body)
+      
+    }else{
+        console.log(chalk.bgRed("Note not found"))
+    }
+
+}
 // The code below is how you export more than one function 
 module.exports = {
     //This is how you export all the function out of the file 
+    readNote: readNote,
     listNotes:  listNotes,
     getNotes: getNotes, 
     addNote: addNote,
