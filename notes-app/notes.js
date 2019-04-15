@@ -16,7 +16,7 @@ const notes = loadNotes()//We sotrage the info into notes
 
 const duplicateNote = notes.find((note) => note.title === title)
 
-debugger
+
 if(!duplicateNote) {  
  // If the length is 0 it means that we did not find any existing note 
  // Now we can safety add a new note 

@@ -65,7 +65,7 @@ yargs.command({
 
 yargs.command({
     command: 'read', 
-    describe: "reading a note ",
+    describe: "reading a note ",g
     builder: { // value is an object
    title: {
        describe: 'Note title', 
