@@ -1,7 +1,7 @@
 const fs = require('fs') // If you want to load or read a file from 
 // the system you must use fs
 const chalk = require('chalk')
-
+//There is a main function 
 const addNote = (title, body)=>{
 const notes = loadNotes()//We sotrage the info into notes 
 // We are going to push a note as object 
