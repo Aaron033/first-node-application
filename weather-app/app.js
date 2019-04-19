@@ -1,6 +1,6 @@
 const request = require('request');
 
-const url = 'https://api.darksky.net/forecast/4/37.8267,-122.4233'
+const url = 'https://api.darksky.net/forecast/37.8267,-122.4233'
 
 request({url: url, json:true }, (error, response) => { // The json: option is going to parse the data so there is not need of 
     // jSON.parse(response.body) option 
@@ -11,7 +11,14 @@ console.log(response.body.daily.data[0].summary +" It's currenctly " + response.
 
 })
 
-const url1 = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=iJ9.gPhF3jbAGPQxXgJzZfdoRg&limit=1'
+const url1 = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=DRqMGVidDRlbGplM3B2aDFwZiJ9.gPhF3jbAGPQxXgJzZfdoRg&limit=1'
 request({url: url1, json: true}, (error, response) =>{ //The url must stay the same 
-    console.log(response.body)
+    if(error){
+console.log('Unable to connect to Weather Serives!')
+    }else{
+        const latitude = response.body.features[0].center[1]
+        const longitude = response.body.features[0].center[0]
+        console.log('The latitud is: '+ latitude + '\n'+ 'The longitud is: '+longitude )
+    }
+    
 })
