@@ -13,3 +13,10 @@ console.log('0 second timer')
 
 
 console.log("Stopping")
+
+
+request({url: url}, (error, response) => { // The json: option is going to parse the data so there is not need of 
+    // jSON.parse option 
+const data = JSON.parse(response.body)
+console.log(data)
+})
