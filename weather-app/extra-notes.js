@@ -20,3 +20,13 @@ request({url: url}, (error, response) => { // The json: option is going to parse
 const data = JSON.parse(response.body)
 console.log(data)
 })
+
+//The error function is a low level information for example (not connectivity)
+request({url: url, json:true }, (error, response) => { // The json: option is going to parse the data so there is not need of 
+    // jSON.parse(response.body) option 
+// console.log(response.body.currently)
+// console.log(response.body.timezone)
+//in foward geocoding we type the string address and we get the coordinates 
+console.log(response.body.daily.data[0].summary +" It's currenctly " + response.body.currently.temperature + " degrees out. There is a "+ response.body.currently.precipProbability +" chance of rain."  )
+
+})
