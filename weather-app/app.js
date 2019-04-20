@@ -8,12 +8,8 @@ if(error){
 console.log('Unable to connect to weather')
 }else if(response.body.error){
     console.log('Unable to find location')
-
-
 }else{
-
     console.log(response.body.daily.data[0].summary +" It's currenctly " + response.body.currently.temperature + " degrees out. There is a "+ response.body.currently.precipProbability +" chance of rain."  )
-
 }
 })
 
@@ -22,8 +18,6 @@ request({url: url1, json: true}, (error, response) =>{ //The url must stay the s
     if(error){
 console.log('Unable to connect to Weather Serives!')
     } else if(response.body.features[0] === undefined){
-        
-
         console.log('Not such location')
     }
     else{
@@ -32,4 +26,23 @@ console.log('Unable to connect to Weather Serives!')
         console.log('The latitud is: '+ latitude + '\n'+ 'The longitud is: '+longitude )
     }
     
+})
+
+const geocode = (address, callback) => {
+//encodeURIComponent  is for special characters 
+     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) +'.json?access_token=
+     if(error){
+         //We are calling the callback function 
+         callback('Unable to connect to services', undefined)
+     }else if (response.body.features.length === 0){
+       callback('Unable to find location', undefined)
+     }else{
+
+     }
+    })
+    }
+
+    //We pass Houston as a parameter 
+geocode('Houston', (error, data) =>{
+
 })
