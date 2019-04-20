@@ -6,16 +6,21 @@ setTimeout(() =>{
 }, 2000)
 
 const names = ['Aaron', 'Botello', 'Herrera', 'Yass']
-const shortNames = names.filter(() =>{
+const shortNames = names.filter((name) =>{
     return name.length <=4
 })
 
 const geocode = (address, callback) => {
-    const data = {
-        latitude: 0, 
-        longitude: 0
-    }
-    return data
+    setTimeout(() =>{
+        const data = {
+            latitude: 0, 
+            longitude: 0
+        }
+
+        return data
+    }, 2000)
 }
 
 const data = geocode('Houston')
+
+console.log(data)
