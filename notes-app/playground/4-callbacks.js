@@ -17,10 +17,10 @@ const geocode = (address, callback) => {
             longitude: 0
         }
 
-        return data
+        callback(data) // We are returning the data from the setTimeOut function
     }, 2000)
 }
 
-const data = geocode('Houston')
+geocode('Houston', (data) => { //The data in passed as an argument can be anything (named)
 
-console.log(data)
+})
