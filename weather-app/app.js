@@ -1,6 +1,6 @@
 const request = require('request');
 
-const url = 'https://api.darks
+const url = 'https://api.darksky.net/forecast/42
 //The error function is a low level information for example (not connectivity)
 request({url: url, json:true }, (error, response) => { // The json: option is going to parse the data so there is not need of 
 //in foward geocoding we type the string address and we get the coordinates 
@@ -17,7 +17,7 @@ console.log('Unable to connect to weather')
 }
 })
 
-const url1 = 'https://api.mapbox..gPhF3jbAGPQxXgJzZfdoRg&limit=1'
+const url1 = 'https://api.mapbox.com/geocoding/v5/mapbox.places/12what.json?access_token=
 request({url: url1, json: true}, (error, response) =>{ //The url must stay the same 
     if(error){
 console.log('Unable to connect to Weather Serives!')
