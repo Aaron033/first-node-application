@@ -33,6 +33,15 @@ console.log(data)
 // 3. After 2 seconds are up, call the callback function with the sum
 // 4. Test your work!
 
+const add =(num1, num2, callback) =>{
+    setTimeout(() =>{
+        sum = num1 + num2
+        callback(sum)
+    })
+}
+
+
+
 add(1, 4, (sum) => {
     console.log(sum) // Should print: 5
 })
