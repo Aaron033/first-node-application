@@ -2,7 +2,7 @@ const request = require('request')
 
 const geocode = (address, callback) => {
     //encodeURIComponent  is for special characters 
-         const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) +'.'
+         const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/
          request({url: url, json: true}, (error, response)=>{
             if(error){
                 //If this code is trigged; The function could have connectivity issues 
