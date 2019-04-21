@@ -16,11 +16,17 @@ const forecast = require('./utils/forecast')
 
     //We pass Houston as a parameter 
 geocode('Houston', (error, data) =>{
-console.log('Error', error)
-console.log('Data', data)
+//return is going to stop the function execution after the error message its print out 
+if(error) {
+    return console.log(error)
+}
 //We are taking the data.longitud option above 
-forecast(data.latitude , data.longitude, (error, data) => {
-    console.log('Error', error)
-    console.log('Data', data)
+forecast(data.latitude , data.longitude, (error, forecastData) => {
+    if(error) {
+        return console.log(error)
+        
+    }
+    console.log(data.location)
+        console.log(forecastData)
 })
 })
