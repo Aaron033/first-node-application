@@ -16,15 +16,19 @@ const forecast = require('./utils/forecast')
 
 
 
-forecast(-75.7088, 44.1545, (error, data) => {
+
+
+
+
+    //We pass Houston as a parameter 
+geocode('Gillette', (error, data) =>{
+console.log('Error', error)
+console.log('Data', data)
+//We are taking the data.longitud option above 
+forecast(data.latitude,data.longitude, (error, data) => {
     console.log('Error', error)
     console.log('Data', data)
-  })
+})
 
 
-
-//     //We pass Houston as a parameter 
-// geocode('Gillette', (error, data) =>{
-// console.log('Error', error)
-// console.log('Data', data)
-// })
+})
