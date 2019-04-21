@@ -9,8 +9,7 @@ if(error){
 }else if(response.body.error){
     callback("Address not found", undefined)
 }else{
-    callback(undefined, {
-        weather: response.body.daily.data[0].summary+" It's currenctly " + response.body.currently.temperature + " degrees out. There is a "+ response.body.currently.precipProbability +" chance of rain." })
+    callback(undefined,response.body.daily.data[0].summary+" It's currenctly " + response.body.currently.temperature + " degrees out. There is a "+ response.body.currently.precipProbability +" chance of rain." )
    
 }
     })
