@@ -2,6 +2,7 @@ const request = require('request');
 
 // const url = 'https://api.darksky.net/forecast/42
 // //The error function is a low level information for example (not connectivity)
+
 // request({url: url, json:true }, (error, response) => { // The json: option is going to parse the data so there is not need of 
 // //in foward geocoding we type the string address and we get the coordinates 
 // if(error){
@@ -30,18 +31,23 @@ const request = require('request');
 
 const geocode = (address, callback) => {
 //encodeURIComponent  is for special characters 
-     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) +'.json?access_toke
+     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) +'.json?access_a'
+     request({url: url, json: true}, (error, response)=>{
+        if(error){
             //We are calling the callback function 
             callback('Unable to connect to services', undefined)
         }else if (response.body.features.length === 0){
           callback('Unable to find location', undefined)
         }else{
-   
+            //We set a undefined parameter because, previous errors had been take cared off 
+         callback(undefined, {
+            latitude: response.body.features[0].center[0], 
+            longitud: response.body.features[0].center[1],
+            location: response.body.features[0].place_name
+            
+         }) 
         }
      })
-   
-
-
     }
     
 
