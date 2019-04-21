@@ -14,21 +14,13 @@ const forecast = require('./utils/forecast')
 //    - Coordinate error, pass string for error
 //    - Success, pass forecast string for data (same format as from before)
 
-
-
-
-
-
-
     //We pass Houston as a parameter 
-geocode('Gillette', (error, data) =>{
+geocode('Houston', (error, data) =>{
 console.log('Error', error)
 console.log('Data', data)
 //We are taking the data.longitud option above 
-forecast(data.latitude,data.longitude, (error, data) => {
+forecast(data.latitude , data.longitude, (error, data) => {
     console.log('Error', error)
     console.log('Data', data)
 })
-
-
 })
