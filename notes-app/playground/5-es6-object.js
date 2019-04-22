@@ -16,8 +16,7 @@ const user = {
 //     location: 'Houston'
 // }
 
-console.log(user)
-console.log(user.age)
+
 
 //Object desctructuring 
 const product = {
@@ -31,7 +30,8 @@ const product = {
 //const stock = product.stock 
 
 //This is how to extrac properties out of an object 
-const {label, stock} = product 
+const {label:productLabel, stock, rating} = product 
 
-console.log(label)
+console.log(productLabel)
 console.log(stock)
+console.log(rating)
