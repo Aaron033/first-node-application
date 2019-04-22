@@ -26,3 +26,12 @@ const product = {
     stock: 201, 
     salePrice: undefined
 }
+
+//const label = product.label
+//const stock = product.stock 
+
+//This is how to extrac properties out of an object 
+const {label, stock} = product 
+
+console.log(label)
+console.log(stock)
