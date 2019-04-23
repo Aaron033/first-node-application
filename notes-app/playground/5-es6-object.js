@@ -23,15 +23,23 @@ const product = {
     label: 'Red notebook', 
     price: 3, 
     stock: 201, 
-    salePrice: undefined
+    salePrice: undefined,
+    rating: 3.4
+    
 }
 
 //const label = product.label
 //const stock = product.stock 
 
-//This is how to extrac properties out of an object 
-const {label:productLabel, stock, rating} = product 
+// //This is how to extrac properties out of an object 
+// const {label:productLabel, stock, rating = 5} = product 
+// //It is going to be used the rating set up in the object 
+// console.log(productLabel)
+// console.log(stock)
+// console.log(rating)
 
-console.log(productLabel)
-console.log(stock)
-console.log(rating)
+const transaction = (type, myProduct) => {
+
+}
+//In this code is taking the object as a parameter 
+transaction('order', product)
