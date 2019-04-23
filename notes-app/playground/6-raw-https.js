@@ -6,11 +6,13 @@ let data = ''
 
     response.on('data', (chunk) =>{
         //It comes the chunk parts of data
-   console.log(chunk)
+        //This is how you convert the chunk data(numbers) to a long string 
+   data = data + chunk.toString()
     })
 
     response.on('end', ()=>{
-
+   const body = JSON.parse(data)
+   console.log(body)
     })
 })
 
