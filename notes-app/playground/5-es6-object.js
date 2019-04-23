@@ -38,8 +38,9 @@ const product = {
 // console.log(stock)
 // console.log(rating)
 
-const transaction = (type, myProduct) => {
-
+const transaction = (type, {label, stock}) => {
+ console.log(type, label, stock)
+ //This method is called distructing; we accessing the properties of product
 }
 //In this code is taking the object as a parameter 
 transaction('order', product)
