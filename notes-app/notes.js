@@ -4,7 +4,7 @@ const chalk = require('chalk')
 //There is a main function 
 const addNote = (title, body)=>{
 const notes = loadNotes()//We sotrage the info into notes 
-// We are going to push a note as object 
+// We are going to push a note as function 
 
 //Here, we are to save all duplicate notes that we find 
 //*This code only check if there is a duplicate 
@@ -21,7 +21,7 @@ if(!duplicateNote) {
  // If the length is 0 it means that we did not find any existing note 
  // Now we can safety add a new note 
  notes.push({
-    title: title,  // The second value comes from the title comes from the addNote argument  
+    title: title,  // The second value comes from the title addNote argument  
     body: body 
     })
     saveNotes(notes)

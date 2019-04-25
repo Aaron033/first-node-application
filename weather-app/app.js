@@ -15,7 +15,7 @@ if(!address){
     if(error) {
         return console.log(error)
     }
-    //Using desconstructing to access properties 
+    //Using desconstructing to access properties
     //We are taking the data.longitud option above 
     forecast(latitude , longitude, (error, forecastData) => {
         if(error) {
