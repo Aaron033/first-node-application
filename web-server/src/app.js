@@ -9,6 +9,15 @@ app.get('', (req, res) =>{
     //res.send() send something back to the requester 
    res.send('Hello express')
 })
+
+//This is how we link web pages   
+app.get('/help', (req, res) =>{
+    res.send('Help Page')
+})
+
+app.get('/about', (req, res) =>{
+    res.send('About Page')
+})
 //Common development port(3000)
 //if we want to start the server we must do use the property listen 
 //The second argument is the callback function
