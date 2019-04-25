@@ -29,7 +29,17 @@ app.get('/me', (req, res) =>{
 })
 
 app.get('/Weather', (req, res) =>{
-    res.send('weather Page')
+    res.send([{
+        country: 'U.S', 
+        location: 'Houston, Texas', 
+
+        
+    }, 
+{
+    precipitation: 0, 
+    temperatur: 80, 
+    airCuality: 'Bad'
+}])
 })
 //Common development port(3000)
 //if we want to start the server we must do use the property listen 
