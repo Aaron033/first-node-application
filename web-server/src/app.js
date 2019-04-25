@@ -18,6 +18,14 @@ app.get('/help', (req, res) =>{
 app.get('/about', (req, res) =>{
     res.send('About Page')
 })
+
+app.get('/me', (req, res) =>{
+    res.send('Me Page')
+})
+
+app.get('/Weather', (req, res) =>{
+    res.send('weather Page')
+})
 //Common development port(3000)
 //if we want to start the server we must do use the property listen 
 //The second argument is the callback function
