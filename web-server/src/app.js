@@ -12,15 +12,20 @@ app.get('', (req, res) =>{
 
 //This is how we link web pages   
 app.get('/help', (req, res) =>{
-    res.send('Help Page')
+    res.send('<h1>This is the help section </h1')
 })
 
 app.get('/about', (req, res) =>{
-    res.send('About Page')
+    res.send('<h1>This is the About section </h1>')
 })
 
 app.get('/me', (req, res) =>{
-    res.send('Me Page')
+    res.send({
+        name:'Aaron',
+        lastName: 'Botello',
+        citizenship: 'U.S'
+        
+    })
 })
 
 app.get('/Weather', (req, res) =>{
