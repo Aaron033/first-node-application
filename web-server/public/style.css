@@ -2,9 +2,23 @@
     margin: 0; 
     padding: 0;
 }
+h1{
+    padding: 10px;
+    text-align: center;
+}
 .parag{
   width: 500px; 
   margin: 0 auto;
+  background-color: rgba(220, 100, 30, 0.3);
+  padding: 10 px;
   
+}
+
+.parag p {
+    padding: 10 px;
+}
+
+ul li{
+    list-style: none;
 }
 
