@@ -10,6 +10,7 @@ const app = express() //This is how we are going to access express properties
 // app.com/about 
 const publicDirectoryPath = path.join(__dirname, '../public') 
 app.use(express.static(publicDirectoryPath))
+app.set('view engine', 'hbs')
 //The function in the second argument is what we want to do when people visits this page
 
 
