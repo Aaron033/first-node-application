@@ -11,18 +11,15 @@ const app = express() //This is how we are going to access express properties
 const publicDirectoryPath = path.join(__dirname, '../public') 
 app.use(express.static(publicDirectoryPath))
 //The function in the second argument is what we want to do when people visits this page
-app.get('', (req, res) =>{
-    //res.send() send something back to the requester 
-   res.send('Hello express')
-})
+
 
 //This is how we link web pages   
 app.get('/help', (req, res) =>{
-    res.send('<h1>This is the help section </h1')
+    
 })
 
 app.get('/about', (req, res) =>{
-    res.send('<h1>This is the About section </h1>')
+
 })
 
 app.get('/me', (req, res) =>{
