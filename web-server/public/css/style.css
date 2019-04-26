@@ -22,11 +22,11 @@ h1{
     align-content: center
 }
 body{
-    background-color: gray !important; 
+    background-color: rgba(red, green, blue, 0.6); 
 }
 .me{
-    width: 300px !important; 
-    height: 300px !important;
+    width: 300px; 
+    height: 300px;
 }
 ul  {
     list-style: none;
@@ -35,11 +35,12 @@ ul  {
 a {
    text-decoration: none;
 
-.parag p {
-    padding: 10 px;
-}
-
 ul li{
     list-style: none;
+}
+
+img{
+    width: 300px; 
+    height: 500px;
 }
 
