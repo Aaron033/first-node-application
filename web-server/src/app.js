@@ -1,5 +1,8 @@
+const path = require('path')
 const express = require('express')
 
+console.log(_dirname)
+console.log(path.join())
 const app = express() //This is how we are going to access express properties 
 // app.com  = Domain , route
 // app.com/help 
