@@ -13,14 +13,23 @@ app.use(express.static(publicDirectoryPath))
 app.set('view engine', 'hbs')
 //The function in the second argument is what we want to do when people visits this page
 
-
+app.get('', (req, res) =>{
+    res.render('index',{
+        title: 'weather App', 
+        name: 'Aaron Botello'
+    })
+    //The render argument needs to match to index.hbs file
+})
 //This is how we link web pages   
 app.get('/help', (req, res) =>{
     
 })
 
 app.get('/about', (req, res) =>{
-
+res.render('about', {
+    title: 'About page', 
+    notes: 'This is the about page'
+})
 })
 
 app.get('/me', (req, res) =>{
