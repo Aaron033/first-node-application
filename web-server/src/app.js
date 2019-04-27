@@ -78,3 +78,6 @@ app.get('/Weather', (req, res) =>{
 app.listen(3000, () =>{
 console.log('Server is running')
 })
+
+
+// nodemon src/app.js -e js,hbs // -e mean extension // it will extend to js and hbs files 
