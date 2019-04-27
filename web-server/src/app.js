@@ -1,5 +1,6 @@
 const path = require('path')
 const express = require('express')
+const hbs =require('hbs')
 
 // console.log(__dirname)
 // //This is how we locate a file in the system 
@@ -8,11 +9,18 @@ const app = express() //This is how we are going to access express properties
 // app.com  = Domain , route
 // app.com/help 
 // app.com/about 
+
+//Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public') 
+const viewsPath = path.join(__dirname, '../templates/views')
+
+//Setup static directory to serve 
 app.use(express.static(publicDirectoryPath))
+
+//Setup handlebars engine and views location
 app.set('view engine', 'hbs')
 //The function in the second argument is what we want to do when people visits this page
-
+app.set('views', viewsPath)
 app.get('', (req, res) =>{
     res.render('index',{
         title: 'weather App', 
