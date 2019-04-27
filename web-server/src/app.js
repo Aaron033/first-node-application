@@ -13,6 +13,8 @@ const app = express() //This is how we are going to access express properties
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public') 
 const viewsPath = path.join(__dirname, '../templates/views')
+const partialsPath = path.join(__dirname, '../templates/partials')
+
 
 //Setup static directory to serve 
 app.use(express.static(publicDirectoryPath))
@@ -21,6 +23,11 @@ app.use(express.static(publicDirectoryPath))
 app.set('view engine', 'hbs')
 //The function in the second argument is what we want to do when people visits this page
 app.set('views', viewsPath)
+hbs.registerPartials(partialsPath)
+
+
+
+
 app.get('', (req, res) =>{
     res.render('index',{
         title: 'weather App', 
