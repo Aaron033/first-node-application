@@ -22,7 +22,10 @@ app.get('', (req, res) =>{
 })
 //This is how we link web pages   
 app.get('/help', (req, res) =>{
-    
+    res.render('help', {
+        title: 'Help needed', 
+        notes: 'Help section here'
+    })
 })
 
 app.get('/about', (req, res) =>{
