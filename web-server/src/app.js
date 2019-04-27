@@ -51,12 +51,14 @@ res.render('about', {
 })
 
 app.get('/me', (req, res) =>{
-    res.send({
+    res.render('me', {
         name:'Aaron',
         lastName: 'Botello',
         citizenship: 'U.S'
-        
     })
+       
+        
+
 })
 
 app.get('/Weather', (req, res) =>{
