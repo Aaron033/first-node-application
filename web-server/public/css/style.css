@@ -16,22 +16,20 @@ h1{
 }
 .navigation {
     display: flex; 
-
-
+    
 }
-.navigation ul{
-  
+.navi-div ul li{
     flex-direction: row;
 }
-
-
-ul  {
-    list-style: none;
+.navigation ul{
     text-decoration: none;
+  
 }
+
 a {
    text-decoration: none;
    color: red;
+   flex-direction: row;
 
 }
 /*This is the navigation section above */ 
