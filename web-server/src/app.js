@@ -52,6 +52,7 @@ res.render('about', {
 
 app.get('/me', (req, res) =>{
     res.render('me', {
+        title: "My bio",
         name:'Aaron',
         lastName: 'Botello',
         citizenship: 'U.S'
