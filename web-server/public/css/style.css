@@ -14,22 +14,12 @@ h1{
     color: gray;
     width: 100%;
 }
-.navigation {
-    display: flex; 
-    
-}
-.navi-div ul li{
-    flex-direction: row;
-}
-.navigation ul{
-    text-decoration: none;
-  
-}
+
 
 a {
    text-decoration: none;
    color: red;
-   flex-direction: row;
+
 
 }
 /*This is the navigation section above */ 
