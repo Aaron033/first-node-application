@@ -38,7 +38,7 @@ app.get('', (req, res) =>{
 //This is how we link web pages   
 app.get('/help', (req, res) =>{
     res.render('help', {
-        title: 'Help needed', 
+        title: 'Help Page', 
         notes: 'Help section here'
     })
 })
