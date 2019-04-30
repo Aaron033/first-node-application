@@ -83,7 +83,9 @@ app.get('/help/*', (req, res) => {
 
 // '*' this match everything we haven't created a page for 
 app.get('*', (req, res) => {
-    res.send('My 404 page');
+    res.render('404', {
+        errorMessage: '404 Page'
+    })
 
 })
 //Common development port(3000)
