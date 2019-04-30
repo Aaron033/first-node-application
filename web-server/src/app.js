@@ -27,7 +27,7 @@ hbs.registerPartials(partialsPath)
 
 
 
-
+// This is the root 
 app.get('', (req, res) =>{
     res.render('index',{
         title: 'weather App', 
@@ -74,6 +74,11 @@ app.get('/Weather', (req, res) =>{
     temperatur: 80, 
     airCuality: 'Bad'
 }])
+})
+
+// '/help/*' match anything that you put after help
+app.get('/help/*', (req, res) => {
+    res.send('Help article not found')
 })
 
 // '*' this match everything we haven't created a page for 
