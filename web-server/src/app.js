@@ -76,8 +76,10 @@ app.get('/Weather', (req, res) =>{
 }])
 })
 
-app.get('', (req, res) => {
-    
+// '*' this match everything we haven't created a page for 
+app.get('*', (req, res) => {
+    res.send('My 404 page');
+
 })
 //Common development port(3000)
 //if we want to start the server we must do use the property listen 
