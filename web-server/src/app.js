@@ -75,6 +75,10 @@ app.get('/Weather', (req, res) =>{
     airCuality: 'Bad'
 }])
 })
+
+app.get('', (req, res) => {
+    
+})
 //Common development port(3000)
 //if we want to start the server we must do use the property listen 
 //The second argument is the callback function
