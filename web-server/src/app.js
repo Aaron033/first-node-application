@@ -84,6 +84,8 @@ app.get('/help/*', (req, res) => {
 // '*' this match everything we haven't created a page for 
 app.get('*', (req, res) => {
     res.render('404', {
+        title: '404', 
+        name: 'Aaron Botello', 
         errorMessage: '404 Page'
     })
 
