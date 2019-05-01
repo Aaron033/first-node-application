@@ -78,7 +78,11 @@ app.get('/Weather', (req, res) =>{
 
 // '/help/*' match anything that you put after help
 app.get('/help/*', (req, res) => {
-    res.send('Help article not found')
+   res.render('404', {
+       title: '404', 
+       name: 'Aaron Botello', 
+       errorMessage= "help article not found"
+   })
 })
 
 // '*' this match everything we haven't created a page for 
@@ -86,7 +90,7 @@ app.get('*', (req, res) => {
     res.render('404', {
         title: '404', 
         name: 'Aaron Botello', 
-        errorMessage: '404 Page'
+        errorMessage: 'page not found'
     })
 
 })
