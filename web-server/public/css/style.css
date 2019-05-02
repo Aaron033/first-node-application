@@ -9,6 +9,9 @@ body, *{
 
 }
 h1{
+
+    font-size: 64px;
+    margin-bottom: 16px;
     padding: 10px;
     text-align: center;
     color: lightcoral;
@@ -19,13 +22,12 @@ header{
  margin-top: 16px;
  margin-bottom: 48px;
 }
-
-a {
-   text-decoration: none;
-   color: red;
-
-
+footer a, header a {
+    text-decoration: none;
+    color: #888; 
+    margin-right: 16px;
 }
+
 /*This is the navigation section above */ 
 
 
