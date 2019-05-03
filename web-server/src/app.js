@@ -30,7 +30,7 @@ hbs.registerPartials(partialsPath)
 // This is the root 
 app.get('', (req, res) =>{
     res.render('index',{
-        title: 'weather App', 
+        title: 'Weather', 
         name: 'Aaron Botello'
     })
     //The render argument needs to match to index.hbs file
@@ -74,6 +74,19 @@ app.get('/Weather', (req, res) =>{
     temperatur: 80, 
     airCuality: 'Bad'
 }])
+})
+
+app.get( '/products', (req, res) => {
+if(!req.query.search){
+    //This is how you send the error message to 
+    return res.send({
+        error: 'You must provide a search term'
+    })
+}
+    console.log(req.query.search)
+    res.send({
+        products: []
+    })
 })
 
 // '/help/*' match anything that you put after help
