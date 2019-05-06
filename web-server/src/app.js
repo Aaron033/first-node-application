@@ -63,6 +63,7 @@ app.get('/me', (req, res) =>{
 })
 
 app.get('/Weather', (req, res) =>{
+    // The req.query value gets if from the  input by the user
    if(!req.query.address){
  return res.send({
      error: 'You must provide a test'
@@ -80,8 +81,9 @@ app.get('/Weather', (req, res) =>{
 
 
 app.get( '/products', (req, res) => {
+  
 if(!req.query.search){
-    //This is how you send the error message to 
+    //This is how you send the error message to the console
     return res.send({
         error: 'You must provide a search term'
     })
@@ -91,6 +93,7 @@ if(!req.query.search){
         products: []
     })
 })
+
 
 
 
