@@ -64,7 +64,10 @@ app.get('/me', (req, res) =>{
 
 app.get('/Weather', (req, res) =>{
    if(!req.query.address){
-
+ return res.send({
+     error: 'You must provide a test'
+     
+ })
    }
 
    res.send({
