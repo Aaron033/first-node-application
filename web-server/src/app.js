@@ -63,18 +63,17 @@ app.get('/me', (req, res) =>{
 })
 
 app.get('/Weather', (req, res) =>{
-    res.send([{
-        country: 'U.S', 
-        location: 'Houston, Texas', 
+   if(!req.query.address){
 
-        
-    }, 
-{
-    precipitation: 0, 
-    temperatur: 80, 
-    airCuality: 'Bad'
-}])
+   }
+
+   res.send({
+       forecast: 'It is hell', 
+       location: 'Houston'
+   })
 })
+
+const search = process.argv[2]  
 
 app.get( '/products', (req, res) => {
 if(!req.query.search){
@@ -88,6 +87,8 @@ if(!req.query.search){
         products: []
     })
 })
+
+
 
 // '/help/*' match anything that you put after help
 app.get('/help/*', (req, res) => {
