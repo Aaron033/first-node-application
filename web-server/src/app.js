@@ -66,17 +66,18 @@ app.get('/Weather', (req, res) =>{
    if(!req.query.address){
  return res.send({
      error: 'You must provide a test'
-     
+
  })
    }
 
    res.send({
        forecast: 'It is hell', 
-       location: 'Houston'
+       location: 'Houston',
+       address: req.query.address
    })
 })
 
-const search = process.argv[2]  
+
 
 app.get( '/products', (req, res) => {
 if(!req.query.search){
