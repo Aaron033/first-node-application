@@ -62,7 +62,7 @@ app.get('/me', (req, res) =>{
 
 })
 
-app.get('/Weather', (req, res) =>{
+app.get('/Weather', (req, res) => {
     // The req.query value gets if from the  input by the user
    if(!req.query.address){
  return res.send({
