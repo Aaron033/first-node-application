@@ -89,7 +89,9 @@ app.get('/Weather', (req, res) => {
          })
 
      }else { 
-         
+         return res.send ({
+             hello: "this is code "
+         })
      }
  })
 
