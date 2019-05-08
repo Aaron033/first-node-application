@@ -76,10 +76,14 @@ app.get('/Weather', (req, res) => {
 
     geocode(req.query.address, (error, {latitude, longitude, location}) => {
  if(error){
-     return res.send({ 
-         error: 'not connecting'})
+     return res.send({
+         //error : error  
+         //but we use the short hand 
+         error })
  }
-    })
+
+
+    }) //taken 
    }
    
 
