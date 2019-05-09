@@ -74,7 +74,11 @@ app.get('/Weather', (req, res) => {
    }else { 
 
      //Deconstructuring below
-    geocode(req.query.address, (error, {latitude, longitude, location}) => {
+    geocode(req.query.address, (error, {latitude, longitude, location} ={}) => {
+        //we set up an empty object in order for our program not to crash 
+        //When the programs prints out the error below 
+        //but, still tries to distructuiring the latitude, longtitude etc,. 
+        
     if(error){
      return res.send({
          //error : error  
