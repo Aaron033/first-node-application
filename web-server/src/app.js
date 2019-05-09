@@ -73,9 +73,9 @@ app.get('/Weather', (req, res) => {
  })
    }else { 
 
-
+     //Deconstructuring below
     geocode(req.query.address, (error, {latitude, longitude, location}) => {
- if(error){
+    if(error){
      return res.send({
          //error : error  
          //but we use the short hand 
@@ -85,14 +85,15 @@ app.get('/Weather', (req, res) => {
  forecast(latitude, longitude , (error, forecastData) =>{
      if(error){
          return res.send({
-             error 
-         })
+             error})
 
-     }else { 
-         return res.send ({
-             hello: "this is code "
-         })
      }
+         res.send ({
+             forecast: forecastData, 
+             location, 
+             address: req.query.address
+         })
+     
  })
 
     }) //taken 
