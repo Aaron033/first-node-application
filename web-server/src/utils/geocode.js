@@ -10,9 +10,11 @@ const geocode = (address, callback) => {
                 callback('Unable to connect to services', undefined)
             }else if (body.features.length === 0){
               callback('Unable to find location', undefined)
+              //If we cannot find the location the code above is trigged 
             }else{
                 //We set a undefined parameter because, previous errors had been take cared off 
              callback(undefined, {
+                //This undefined takes the place of the error message 
                 latitude: body.features[0].center[1], 
                 longitude:body.features[0].center[0],
                 location: body.features[0].place_name
