@@ -9,8 +9,10 @@ if(!address){
     console.log('Provide an address')
 
 }else{
+
    //We pass Houston as a parameter 
    geocode(address, (error, {latitude, longitude, location}) =>{
+       //Deconstructuring 
     //return is going to stop the function execution after the error message its print out 
     if(error) {
         return console.log(error)
