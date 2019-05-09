@@ -38,7 +38,8 @@ const product = {
 // console.log(stock)
 // console.log(rating)
 
-const transaction = (type, {label, stock}) => {
+//We are setting up the default values for lavel and stock 
+const transaction = (type, {label, stock = 0 } ={}) => {
  console.log(type, label, stock)
  //This method is called distructing; we accessing the properties of product
 }
