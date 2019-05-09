@@ -45,3 +45,16 @@ const transaction = (type, {label, stock = 0 } ={}) => {
 }
 //In this code is taking the object as a parameter 
 transaction('order', product)
+
+const myproduct = {
+    label: 'NoteBook', 
+    price: 2100, 
+    stock: 500, 
+    salePrice: undefined, 
+    rating: 5.0
+}
+const myorder = (type, {label, stock }) => {
+    console.log(type, label, stock)
+}
+
+myorder('Sale', myproduct)
