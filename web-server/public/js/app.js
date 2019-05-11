@@ -15,7 +15,7 @@ const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
 
-messageOne.textContent = "From javaScript"
+messageOne.textContent = ""
 messageTwo.textContent = ""
 
 weatherForm.addEventListener('submit', (e) => {
@@ -25,13 +25,14 @@ weatherForm.addEventListener('submit', (e) => {
     const location = search.value 
     //The value is the information that we typed in the search box
 
+
 fetch('http://localhost:3000/weather?address=' + location).then((response) => {
         response.json().then((data) =>{
            if(data.error){
                console.log(data.error)
            }else{
-            console.log(data.location)
-            console.log(data.forecast)
+            messageOne.textContent = data.location
+            messageTwo.textContent = data.forecast
            
            }
         })
