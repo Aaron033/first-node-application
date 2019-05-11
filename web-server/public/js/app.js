@@ -8,17 +8,6 @@ console.log('Client side javascript file is loaded')
 
 // })
 
-fetch('http://localhost:3000/weather?address=Boston').then((response) => {
-    response.json().then((data) =>{
-       if(data.error){
-           console.log(data.error)
-       }else{
-        console.log(data.location)
-        console.log(data.forecast)
-       
-       }
-    })
-})
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
@@ -29,5 +18,25 @@ weatherForm.addEventListener('submit', (e) => {
 
     const location = search.value 
     //The value is the information that we typed in the search box
-    console.log('testing!')
+
+if(!location) {
+    console.log('Must provide location')
+}else {
+    const show = fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+        response.json().then((data) =>{
+           if(data.error){
+               console.log(data.error)
+           }else{
+            console.log(data.location)
+            console.log(data.forecast)
+           
+           }
+        })
+    })
+    
+    console.log(show)
+
+}
+
+
 })
