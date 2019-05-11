@@ -21,9 +21,13 @@ fetch('http://localhost:3000/weather?address=Boston').then((response) => {
 })
 
 const weatherForm = document.querySelector('form')
+const search = document.querySelector('input')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    
+    //The code above prevents the reloading default action 
+
+    const location = search.value 
+    //The value is the information that we typed in the search box
     console.log('testing!')
 })
