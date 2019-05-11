@@ -19,9 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
     const location = search.value 
     //The value is the information that we typed in the search box
 
-if(!location) {
-    console.log('Must provide location')
-}else {
+
     const show = fetch('http://localhost:3000/weather?address=' + location).then((response) => {
         response.json().then((data) =>{
            if(data.error){
@@ -36,7 +34,7 @@ if(!location) {
     
     console.log(show)
 
-}
+
 
 
 })
