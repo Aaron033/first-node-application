@@ -11,6 +11,9 @@ const app = express() //This is how we are going to access express properties
 // app.com  = Domain , route
 // app.com/help 
 // app.com/about 
+
+const port = process.env.PORT || 3000
+//Process.env is where we can  access enviroment variables 
 const address = process.argv[2] 
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public') 
@@ -151,8 +154,8 @@ app.get('*', (req, res) => {
 //Common development port(3000)
 //if we want to start the server we must do use the property listen 
 //The second argument is the callback function
-app.listen(3000, () =>{
-console.log('Server is running')
+app.listen(port, () =>{
+console.log('Server is up on port' + port)
 })
 
 
