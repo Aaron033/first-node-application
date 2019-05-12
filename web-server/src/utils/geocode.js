@@ -26,3 +26,9 @@ const geocode = (address, callback) => {
         
 
         module.exports = geocode
+//Terminal commands 
+// -a   aflag shows hidden files even files that start with a dot 
+// -l list items  (top-to-bottom)
+      //   ~ path to user directory 
+      // ~/.ssh we are looking for the ssh folder  .ssh if the folder is not there the command line is going to crash 
+      
