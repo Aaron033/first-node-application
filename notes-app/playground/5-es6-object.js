@@ -56,5 +56,5 @@ const myproduct = {
 const myorder = (type, {label, stock }) => {
     console.log(type, label, stock)
 }
-
+//type has no value or it is connected to something 
 myorder('Sale', myproduct)
