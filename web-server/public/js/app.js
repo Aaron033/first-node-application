@@ -31,9 +31,11 @@ fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) =>{
            if(data.error){
             messageTwo.textContent = data.error
+            //It will show the error in the console 
            }else{
             messageOne.textContent = data.location
             messageTwo.textContent = data.forecast
+            // It would get the code from the data in the geocode 
            
            }
         })
