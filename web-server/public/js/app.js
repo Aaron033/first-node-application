@@ -1,13 +1,5 @@
 console.log('Client side javascript file is loaded')
 
-// fetch('http://puzzle.mead.io/puzzle').then((response) =>{ 
-//     response.json().then((data) => {
-//     //response.json is a function the second.then is going to run when the json data has arrived and then parse
-//     console.log(data)
-//     })
-
-// })
-
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')

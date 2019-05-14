@@ -59,3 +59,13 @@ console.log('Unable to connect to Weather Serives!')
     }
     
 })
+
+
+
+// fetch('http://puzzle.mead.io/puzzle').then((response) =>{ 
+//     response.json().then((data) => {
+//     //response.json is a function the second.then is going to run when the json data has arrived and then parse
+//     console.log(data)
+//     })
+
+// })
