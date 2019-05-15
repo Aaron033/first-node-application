@@ -103,15 +103,8 @@ app.get('/Weather', (req, res) => {
      
  })
 
-    }) //taken 
+    }) 
    }
-   
-
-//    res.send({
-//        forecast: 'It is hell', 
-//        location: 'Houston',
-//        address: req.query.address
-//    })
 })
 
 
