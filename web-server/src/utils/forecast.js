@@ -1,7 +1,7 @@
 const request = require('request')
 
 const forecast = (latitude, longitude, callback) =>{
-   //The secret key is hidden 
+   
     const url = 'https://api.darksky.net/forecast//' + latitude + ',' + longitude 
 
     //Destructuring sytnax is to encolse the parameter in curly braces 
