@@ -144,6 +144,7 @@ app.get('/help/*', (req, res) => {
 
 // '*' this match everything we haven't created a page for 
 app.get('*', (req, res) => {
+    //It catches  all notdefined pages 
     res.render('404', {
         title: '404', 
         name: 'Aaron Botello', 
