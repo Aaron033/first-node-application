@@ -2,7 +2,7 @@ const request = require('request')
 
 const forecast = (latitude, longitude, callback) =>{
    //The key is hidden not uploaded 
-    const url = 'https://api.darksky.net/forecast/42630016cca883960a1b5228a7b95952/' + latitude + ',' + longitude 
+    const url = 'https://api.darksky.net/forecast//' + latitude + ',' + longitude 
 
     //Destructuring sytnax is to encolse the parameter in curly braces 
     request({url, json: true}, (error, {body})=>{
