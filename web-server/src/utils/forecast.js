@@ -9,6 +9,8 @@ const forecast = (latitude, longitude, callback) =>{
         //we are going to remove the url: because it matches the url const 
         //We are going change the response to body because he get the info from the body 
 if(error){
+
+    //Callback used , the second arguments is a field blank 
     callback('Unable to connect to a server', undefined)
 }else if(body.error){
     callback("Address not found", undefined)
