@@ -2,7 +2,7 @@ const request = require('request')
 
 const geocode = (address, callback) => {
     //encodeURIComponent  is for special characters 
-         const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoiYWFyb24wMzMiLCJhI'
+         const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoiYWFyb24wMzMiLCJhIjoiY2p1b21ldDRqMGVidDRlbGplM3B2aDFwZiJ9.gPhF3jbAGPQxXgJzZfdoRg'
          request({url, json: true}, (error, {body})=>{
             if(error){
                 //If this code is trigged; The function could have connectivity issues 
@@ -27,6 +27,15 @@ const geocode = (address, callback) => {
 
         module.exports = geocode
 //Terminal commands 
+// -a   aflag shows hidden files even files that start with a dot 
+// -l list items  (top-to-bottom)
+      //   ~ path to user directory 
+      // ~/.ssh we are looking for the ssh folder  .ssh if the folder is not there the command line is going to crash 
+      
+      // important 
+
+
+      //Terminal commands 
 // -a   aflag shows hidden files even files that start with a dot 
 // -l list items  (top-to-bottom)
       //   ~ path to user directory 
