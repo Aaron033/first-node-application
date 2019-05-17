@@ -2,15 +2,13 @@ const request = require('request')
 
 const forecast = (latitude, longitude, callback) =>{
    //The key is hidden not uploaded 
-    const url = 'https://api.darksky.net/forecast//' + latitude + ',' + longitude 
+    const url = 'https://api.darksky.net/forecast/42630016cca883960a1b5228a7b95952/' + latitude + ',' + longitude 
 
     //Destructuring sytnax is to encolse the parameter in curly braces 
     request({url, json: true}, (error, {body})=>{
         //we are going to remove the url: because it matches the url const 
         //We are going change the response to body because he get the info from the body 
 if(error){
-
-    //Callback used , the second arguments is a field blank 
     callback('Unable to connect to a server', undefined)
 }else if(body.error){
     callback("Address not found", undefined)

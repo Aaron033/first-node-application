@@ -139,7 +139,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     //It catches  all notdefined pages 
     res.render('404', {
-        title: '404', 
+        title: '404', git
         name: 'Aaron Botello', 
         errorMessage: 'page not found'
     })
